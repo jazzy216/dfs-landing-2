@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Dark Fire Security | Anti-Surveillance Resources">
+  <meta property="og:description" content="A curated collection of tools and guides for digital privacy and anti-surveillance.">
+  <meta name="description" content="A curated collection of tools and guides for digital privacy, anti-surveillance, and secure communications.">
+
+  <title>Dark Fire Security | Resources</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <style>
+    /* Resources-only styles (kept minimal) */
+    .hero-section {
+      text-align: center;
+      padding: 80px 20px;
+      background: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 100%);
+    }
+
+    #searchBar {
+      width: 100%;
+      max-width: 600px;
+      padding: 18px 25px;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    #searchBar:focus {
+      border-color: var(--accent-color);
+      background: #222;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .video-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .video-container {
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #222;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .video-container:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent-color);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 15px var(--accent-glow);
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      background: #000;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    .video-content {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      background: rgba(0, 255, 157, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent-color);
+      border: 1px solid rgba(0, 255, 157, 0.2);
+      margin-bottom: 15px;
+      align-self: flex-start;
+      letter-spacing: 1px;
+    }
+
+    .video-content h3 {
+      margin: 0 0 12px 0;
+      color: #fff;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .video-content p {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    #noResults {
+      grid-column: 1 / -1;
+      text-align: center;
+      display: none;
+      color: var(--text-dim);
+      padding: 100px 20px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section { padding: 40px 20px; }
+      .video-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo">DARK FIRE <span>SECURITY</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/resources">Resources</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero-section">
+    <h1>RESOURCES</h1>
+    <span class="subtitle">Equipping you against everyday surveillance.</span>
+    <input type="text" id="searchBar" placeholder="Search by topic, tool, or creator...">
+  </div>
+
+  <div class="video-grid" id="videoGrid">
+    <!-- ALL your videos preserved below -->
+
+    <div class="video-container reveal" data-category="hardware">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/z6IOVYemF20" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Hardware</span>
+        <h3>Touch Screen Meshtastic Build</h3>
+        <p>Showcasing a hardware build for off-grid, encrypted mesh network communication using LoRa radios.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="privacy os">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/RMS4-05vQxY" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Privacy & OS</span>
+        <h3>Disable Windows Bloatware & Spyware</h3>
+        <p>A guide on stripping away telemetry and unnecessary background processes to reclaim privacy in Windows.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="networking">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/Z93pw1ddDMg" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Networking</span>
+        <h3>Rayhunter with Verizon Orbic</h3>
+        <p>A demonstration of cellular signal analysis and "Rayhunter" software running on an Orbic mobile device.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="surveillance">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/vU1-uiUlHTo" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Surveillance</span>
+        <h3>Flock Cameras Security Vulnerabilities</h3>
+        <p>Benn Jordan investigates the security risks and lack of password protection on license plate readers.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="privacy">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/3rm4AZ24AbI" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Privacy</span>
+        <h3>The Google Botnet</h3>
+        <p>A deep dive into how Google's ecosystem tracks user behavior across the internet.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="legal rights">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/QRd7ZO0E7PQ" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Legal Rights</span>
+        <h3>The Right to Privacy in Public</h3>
+        <p>Exploring the legal arguments for maintaining privacy rights even in public spaces.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="communication">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/v9RgOumTkYU" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Communication</span>
+        <h3>Using VoIP for Privacy</h3>
+        <p>How to set up and use Voice over IP to prevent your identity from being tied to a SIM card.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="hardware">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/nT1ZIlEl3LE" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Hardware</span>
+        <h3>Travel Router Security (GL.iNet Slate AX)</h3>
+        <p>Creating a secure personal "bubble" when using public Wi-Fi in hotels or airports.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="security">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/uB0gr7Fh6lY" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Security</span>
+        <h3>Analyzing Flock Camera Security</h3>
+        <p>Technical insights into the vulnerabilities surrounding private surveillance networks.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="privacy os">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/nHxnjcx_G34" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Privacy & OS</span>
+        <h3>GrapheneOS: The Ultimate Privacy Phone</h3>
+        <p>David Bombal breaks down how GrapheneOS provides a hardened, de-Googled experience.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="privacy">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/QpFw7dk9l-0" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Privacy</span>
+        <h3>Proton: Everyday Surveillance</h3>
+        <p>An overview of how modern digital life tracks your every move and what you can do to reclaim your data.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="security">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/jBsSLcK6h8A" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Security</span>
+        <h3>Proton: Workplace Spying</h3>
+        <p>Exploring the tools and methods employers use to monitor staff and how to protect your boundaries.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="privacy os">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/uElWqzjC1eI" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Privacy & OS</span>
+        <h3>Use a Local Windows Account</h3>
+        <p>David Bombal explains why you should avoid Microsoft accounts and how to set up a local user for better privacy.</p>
+      </div>
+    </div>
+
+    <div class="video-container reveal" data-category="hardware">
+      <div class="iframe-wrapper"><iframe src="https://www.youtube.com/embed/tbCKWX34_G4" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-content">
+        <span class="tag">Hardware</span>
+        <h3>Self-Hosted Private Cloud Cameras</h3>
+        <p>Network Chuck walks you through building your own secure, private camera system without relying on third-party cloud providers.</p>
+      </div>
+    </div>
+
+    <p id="noResults">No resources found matching your search query.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <span class="footer-logo">DARK FIRE SECURITY</span>
+        <p class="footer-text">Our mission is to empower individuals and small businesses with the knowledge to defend their digital sovereignty and privacy.</p>
+      </div>
+      <div>
+        <h4 style="color: #fff; margin-bottom: 15px;">Resources</h4>
+        <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: var(--text-dim);">
+          <li style="margin-bottom: 8px;">Network Security</li>
+          <li style="margin-bottom: 8px;">Hardware Hardening</li>
+          <li style="margin-bottom: 8px;">Privacy OS Guides</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; margin-bottom: 15px;">Disclaimer</h4>
+        <p class="footer-text" style="font-size: 0.75rem;">Information provided is for educational purposes. Always perform due diligence when implementing security measures.</p>
+        <p class="footer-text" style="margin-top: 15px;">&copy; 2026 Dark Fire Security</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/resources.js"></script>
+</body>
+</html>
